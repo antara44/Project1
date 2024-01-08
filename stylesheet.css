@@ -1,0 +1,245 @@
+.
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins',sans-serif;
+    
+}
+body{
+    color: white;
+    overflow-x: hidden;
+   
+   
+}
+.header
+{
+    position: fixed;
+   top: 0;
+   left: 0;
+    width: 90%;
+    padding: 20px 7%;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 20px;
+    z-index: 100;
+    
+
+}
+.logo{
+    position: relative;
+    padding: 20px 25px;
+    border: solid white;
+    border-width: 1px;
+    font-size: 25px;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: default;
+    margin-right: 20px;
+    opacity: 0;
+    animation: slideRight 3s ease forwards;
+    
+}
+.logo:hover{
+  background-color: aliceblue;
+  color: black;
+  
+
+}
+.navbar a{
+ 
+    display: inline-block;
+    font-size: 25px;
+    color: white;
+    text-decoration: underline;
+    font-weight: 500;
+    margin-left: 10px;
+    transition: .3s;
+    opacity: 0;
+    animation: slideTop 3s ease forwards;
+ animation-delay: calc(.2s*var(--i));
+}
+.navbar a:hover{
+    color: cyan;
+    text-shadow: 0 0 10px;
+}
+.home{
+    position: relative;
+    width: 90%;
+    justify-content: space-between;
+    height:100vh;
+    background: url(https://images.unsplash.com/photo-1682685796063-d2604827f7b3?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D) no-repeat;
+    background-size: cover;
+    display: flex;
+   align-items: center;
+   padding: 60px 6.5% 0;
+} 
+   
+  .home-content h3{
+    font-size: 32px;
+    font-weight: 700;
+    opacity: 0;
+    animation: slideBottom 1s ease forwards;
+    animation-delay: .7s;
+  }
+  .home-content h3:nth-of-type(2){
+    margin-bottom: 30px;
+    animation: slideTop 1s ease forwards;
+
+  }
+  .home-content h3 span{
+    color: aqua;
+  }
+  .home-content h1{
+    font-size: 56px;
+    font-weight: 700;
+    margin: -3px 0;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+    animation-delay: 1s;
+  }
+  .home-content p{
+  font-size: 20px;
+  opacity: 0;
+  animation: slideLeft 1s ease forwards;
+  animation-delay: 1s;
+  }
+  
+  .home-sci a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width:40px;
+    height: 40px;
+    background:transparent;
+    border: 2px solid aqua;
+    border-radius: 50%;
+    font-size: 20px;
+    color: aqua;
+    text-decoration: none;
+    transition: .5s ease;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+    animation-delay: calc(.2s*var);
+    margin: 30px 15px 30px 0;
+  }
+  .home-sci a:hover{
+    background: aqua;
+    color:#081b29;
+    box-shadow: 0 0 20px aqua;
+  }
+  .btn-box{
+    display: inline-block;
+    padding: 12px 28px;
+    background: aqua;
+    border-radius: 40px;
+    font-size: 16px;
+    color:#081b29;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 600;
+    box-shadow: 0 0 20px cyan;
+    animation: slideRight 1s ease forwards;
+  }
+  .btn-box:hover{
+box-shadow: 0 0 5px cyan,
+0 0 25px cyan, 0 0 50px cyan,0 0 100px cyan, 0 0 200px cyan
+
+  }
+  
+ 
+  .about img{
+   
+    background-size: fit-content;
+    width: 750px;
+   max-height: 1000px;
+   padding-top: 10px;
+   float: right;
+   margin: 0;
+  
+  }
+  
+  #hometown{
+    color: black;
+    font-size: 25px;
+    font-style: italic;
+    font-weight: 100;
+    float: left;
+    padding: 35px;
+    max-width: 600px;
+  }
+  #hometown:hover{
+    animation: slideLeft 1s ease forwards;
+  }
+  #school
+  {
+    color: black;
+    font-size: 25px;
+    font-style: italic;
+    font-weight: 100;
+    float: right;
+    padding: 35px;
+    max-width: 600px;
+  
+
+  }
+  #school:hover{
+    animation: slideLeft 1s ease forwards;
+  }
+  #college{
+    color: black;
+    font-size: 25px;
+    font-style: italic;
+    font-weight: 100;
+    float: left;
+    padding: 35px;
+    max-width: 600px;
+    
+  }
+  #college:hover{
+    animation: slideLeft 1s ease forwards;
+  }
+   
+  
+  @keyframes slideRight{
+    0%{
+transform:translateX(-100px);
+opacity: 0;
+  }
+  100%{
+    transform:translateX(0px);
+    opacity: 1;
+      }}
+      @keyframes slideTop{
+        0%{
+    transform:translateY(100px);
+    opacity: 0;
+      }
+      100%{
+        transform:translateY(0px);
+        opacity: 1;
+          }}
+          @keyframes slideBottom{
+            0%{
+        transform:translateY(-100px);
+        opacity: 0;
+          }
+          100%{
+            transform:translateY(0px);
+            opacity: 1;
+              }}
+              @keyframes slideLeft{
+                0%{
+            transform:translateX(100px);
+            opacity: 0;
+              }
+              100%{
+                transform:translateX(0px);
+                opacity: 1;
+                  }}
+                  
+
+              
